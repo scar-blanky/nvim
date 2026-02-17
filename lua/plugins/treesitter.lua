@@ -1,0 +1,35 @@
+return {
+    'nvim-treesitter/nvim-treesitter',
+    lazy = false,
+    branch = 'main',
+    build = ':TSUpdate',
+    cmd = { 'TSUpdate', 'TSInstall', 'TSLog', 'TSUninstall' },
+    config = function()
+        require('nvim-treesitter').install({
+          'bash',
+          'c',
+          'diff',
+          'haskell',
+          'html',
+          'javascript',
+          'jsdoc',
+          'json',
+          'lua',
+          'luadoc',
+          'luap',
+          'markdown',
+          'markdown_inline',
+          'printf',
+          'python',
+          'query',
+          'regex',
+          'toml',
+          'tsx',
+          'typescript',
+          'vim',
+          'vimdoc',
+          'xml',
+          'yaml',
+        })
+    end
+}
